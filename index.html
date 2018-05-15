@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--Criar um programa em qualquer linguagem de programação capaz de fazer a análise de um IP e identificar sua :
+1 - Classe
+2 - Máscara
+3 - Endereço de Rede
+4 - Endereço Inicial utilizável da Rede
+5 - Endereço Final utilizável da Rede
+6 - Endereço de Broadcast
+7 - Verificar se o IP é válido ou não
+8 - Verificar se o IP é reservado para LAN (Rede Interna)  -->
+
+<!-- O programa deve também mostrar os dados de sub-rede -->
+
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Redes de Computadores</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script-rede.js"></script>
+    <script src="script-sub-rede.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Redes de Computadores</h1>
+    </header>
+    <main>
+        <div id="container">   
+            <div>
+                <h2>Exibe dados de uma Rede padrão</h2>
+                <h3>Entre com um IP:</h3>
+                <input type="text" id="ip">
+                <button onclick="exibeRede()">Exibir</button>
+
+                <div>
+                    <span id="resultado">
+                        IP : <br/>
+                        IP Binário : <br/>
+                        IP Classe : <br/>
+                        Máscara : <br/>
+                        Rede : <br/>
+                        IP inicial da Rede : <br/>
+                        IP final da Rede : <br/>
+                        Broadcast : <br/>
+                    </span>
+                </div>
+            </div>
+            <div id="div-rigth">
+                <h2>Exibe dados de Sub-Rede</h2>
+                
+                <div id="div-sub-rede">
+                    <div>
+                        <h3>Entre com uma Rede:</h3>    
+                        <input type="text" id="ipSubRede">
+                    </div>   
+                    <div>
+                        <h3>Quantidade de IPs:</h3>
+                        <input type="number" id="ipQuantidadeSubRede" min="0" max="16777214">
+                        <button onclick="exibeSubRede()">Exibir</button>
+                    </div>
+                </div>
+                
+                <div>
+                    <span id="resultado2">
+                    </span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>Todos os Direitos Reservados - IFMS</p>
+    </footer>
+</body>
+</html>
