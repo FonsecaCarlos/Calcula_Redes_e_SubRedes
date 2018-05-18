@@ -44,6 +44,10 @@ span{
     display: flex;
 }
 
+th, td {
+    padding: 0 5px;
+}
+
 @media (max-width: 700px){
     main, header, footer{
         height: auto;

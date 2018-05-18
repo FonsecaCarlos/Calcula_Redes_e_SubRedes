@@ -1,16 +1,4 @@
 <!DOCTYPE html>
-<!--Criar um programa em qualquer linguagem de programação capaz de fazer a análise de um IP e identificar sua :
-1 - Classe
-2 - Máscara
-3 - Endereço de Rede
-4 - Endereço Inicial utilizável da Rede
-5 - Endereço Final utilizável da Rede
-6 - Endereço de Broadcast
-7 - Verificar se o IP é válido ou não
-8 - Verificar se o IP é reservado para LAN (Rede Interna)  -->
-
-<!-- O programa deve também mostrar os dados de sub-rede -->
-
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
@@ -44,6 +32,8 @@
                     </span>
                 </div>
             </div>
+            
+            
             <div id="div-rigth">
                 <h2>Exibe dados de Sub-Rede</h2>
                 
@@ -53,7 +43,11 @@
                         <input type="text" id="ipSubRede">
                     </div>   
                     <div>
-                        <h3>Quantidade de IPs:</h3>
+                        <h3>Montar Subrede:</h3>
+                        <input id="radioHosts" type="radio" name="opcao" checked>
+                        <label for="radioHosts">Por hosts</label>
+                        <input id="radioSubrede" type="radio" name="opcao">
+                        <label for="radioSubrede">Por subrede</label>
                         <input type="number" id="ipQuantidadeSubRede" min="0" max="16777214">
                         <button onclick="exibeSubRede()">Exibir</button>
                     </div>
@@ -61,6 +55,10 @@
                 
                 <div>
                     <span id="resultado2">
+                        IP Classe : <br/>
+                        Máscara : <br/>
+                        Quantidade de Subredes : <br/>
+                        Quantidade de Hosts : <br/>
                     </span>
                 </div>
             </div>

@@ -1,13 +1,3 @@
-/*Criar um programa em qualquer linguagem de programação capaz de fazer a análise de um IP e identificar sua :
-1 - Classe
-2 - Máscara
-3 - Endereço de Rede
-4 - Endereço Inicial utilizável da Rede
-5 - Endereço Final utilizável da Rede
-6 - Endereço de Broadcast
-7 - Verificar se o IP é válido ou não
-8 - Verificar se o IP é reservado para LAN (Rede Interna)*/
-
 var resultado;
 var oct1, oct2, oct3, oct4;
 
@@ -60,32 +50,32 @@ function retornaMascara(aux, mascara){
         }
     } else if ( mascara == "Classe A" ) {
         if( aux<256 ){
-            aux = Math.ceil(aux);
+            aux = Math.ceil(aux); //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             
         }else if( (aux>256) && (aux<65536) ){
-            aux = Math.ceil(aux/256);
+            aux = Math.ceil(aux/256); //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + masc(aux) + " . " + 0;
 
         }else if( (aux>65536) && (aux<16777216) ){
-            aux = Math.ceil(aux/65536);
+            aux = Math.ceil(aux/65536);  //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + masc(aux) + " . " + 0 + " . " + 0;
             
         }
             
     } else if ( mascara == "Classe B" ) {
         if( aux<256 ){
-            aux = Math.ceil(aux);
+            aux = Math.ceil(aux);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             
         }else if( (aux>256) && (aux<65536) ){
-            aux = Math.ceil(aux/256);
+            aux = Math.ceil(aux/256);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + masc(aux) + " . " + 0;
 
         }
     } else if ( (mascara == "Classe C")  ) {
         if( aux<256 ){
-            aux = Math.ceil(aux);
+            aux = Math.ceil(aux);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             
         } 
@@ -96,7 +86,7 @@ function retornaDados(){
     
     if( (oct1>0) && (oct1<=127) ){
         resultado += "IP : " + retornaClasse(oct1) + "</br>";
-        resultado += "Mascara : " + retornaMascara(0, retornaClasse(oct1)) + "</br>";
+        resultado += "Mascara : " + retornaMascara(-1, retornaClasse(oct1)) + "</br>";
         resultado += "Rede : " + oct1 + " . " + 0 + " . " + 0 + " . " + 0 + "</br>";
         resultado += "IP inicial da Rede : " + oct1 + " . " + 0 + " . " + 0 + " . " + 1 + "</br>";
         resultado += "IP final da Rede : " + oct1 + " . " + 255 + " . " + 255 + " . " + 254 + "</br>";
@@ -108,7 +98,7 @@ function retornaDados(){
         }
     }else if( (oct1>=128) && (oct1<=191) ){
         resultado += "IP : " + retornaClasse(oct1) + "</br>";
-        resultado += "Mascara : " + retornaMascara(0, retornaClasse(oct1)) + "</br>";
+        resultado += "Mascara : " + retornaMascara(-1, retornaClasse(oct1)) + "</br>";
         resultado += "Rede : " + oct1 + " . " + oct2 + " . " + 0 + " . " + 0 + "</br>";
         resultado += "IP inicial da Rede : " + oct1 + " . " + oct2 + " . " + 0 + " . " + 1 + "</br>";
         resultado += "IP final da Rede : " + oct1 + " . " + oct2 + " . " + 255 + " . " + 254 + "</br>";
@@ -118,7 +108,7 @@ function retornaDados(){
         }
     }else if( (oct1>=192) && (oct1<=223) ){
         resultado += "IP : " + retornaClasse(oct1) + "</br>";
-        resultado += "Mascara : " + retornaMascara(0, retornaClasse(oct1)) + "</br>";
+        resultado += "Mascara : " + retornaMascara(-1, retornaClasse(oct1)) + "</br>";
         resultado += "Rede : " + oct1 + " . " + oct2 + " . " + oct3 + " . " + 0 + "</br>";
         resultado += "IP inicial da Rede : " + oct1 + " . " + oct2 + " . " + oct3 + " . " + 1 + "</br>";
         resultado += "IP final da Rede : " + oct1 + " . " + oct2 + " . " + oct3 + " . " + 254 + "</br>";
