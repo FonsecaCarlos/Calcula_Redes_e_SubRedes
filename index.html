@@ -15,7 +15,7 @@
         <div id="container">   
             <div>
                 <h2>Exibe dados de uma Rede padrão</h2>
-                <h3>Entre com um IP:</h3>
+                <h3>Entre com um IP</h3>
                 <input type="text" id="ip">
                 <button onclick="exibeRede()">Exibir</button>
 
@@ -39,15 +39,17 @@
                 
                 <div id="div-sub-rede">
                     <div>
-                        <h3>Entre com uma Rede:</h3>    
+                        <h3>Entre com uma Rede</h3>    
                         <input type="text" id="ipSubRede">
                     </div>   
                     <div>
-                        <h3>Montar Subrede:</h3>
-                        <input id="radioHosts" type="radio" name="opcao" checked>
-                        <label for="radioHosts">Por hosts</label>
-                        <input id="radioSubrede" type="radio" name="opcao">
-                        <label for="radioSubrede">Por subrede</label>
+                        <h3>Montar Subrede</h3>
+                        <div id="div-radio">
+                            <input id="radioHosts" type="radio" name="opcao" checked>
+                            <label for="radioHosts">Por hosts</label>   
+                            <input id="radioSubrede" type="radio" name="opcao">
+                            <label for="radioSubrede">Por subrede</label>
+                        </div>
                         <input type="number" id="ipQuantidadeSubRede" min="0" max="16777214">
                         <button onclick="exibeSubRede()">Exibir</button>
                     </div>

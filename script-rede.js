@@ -19,27 +19,25 @@ function masc(hosts){
     if (quantidade==-1) {
         return 0;   
     } else {
-        if( 2 > hosts ){
+        if( 2 >= hosts ){
             return 252;
-        }else if( 4 > hosts ){
-            return 252;
-        }else if( 8 > hosts ){
+        }else if( 6 >= hosts ){
             return 248;
-        }else if( 16 > hosts ){
+        }else if( 14 >= hosts ){
             return 240;
-        }else if( 32 > hosts ){
+        }else if( 30 >= hosts ){
             return 224;
-        }else if( 64 > hosts ){
+        }else if( 62 >= hosts ){
             return 192;
-        }else if( 128 > hosts ){
+        }else if( 126 >= hosts ){
             return 128;
-        }else if( 256 > hosts ){
+        }else if( 254 >= hosts ){
             return 0;
         }
     }
 }
 
-function retornaMascara(aux, mascara){
+function retornaMascara(aux, classe){
     if (aux == -1) {
         if( (oct1>0) && (oct1<=127) ){
             return 255 + " . " + masc(aux) + " . " + 0 + " . " + 0;
@@ -48,33 +46,33 @@ function retornaMascara(aux, mascara){
         }else if( (oct1>=192) && (oct1<=255) ){
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
         }
-    } else if ( mascara == "Classe A" ) {
-        if( aux<256 ){
+    } else if ( classe == "Classe A" ) {
+        if( aux<=254 ){
             aux = Math.ceil(aux); //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             
-        }else if( (aux>256) && (aux<65536) ){
+        }else if( (aux>254) && (aux<=65534) ){
             aux = Math.ceil(aux/256); //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + masc(aux) + " . " + 0;
 
-        }else if( (aux>65536) && (aux<16777216) ){
+        }else if( (aux>65534) && (aux<=16777214) ){
             aux = Math.ceil(aux/65536);  //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + masc(aux) + " . " + 0 + " . " + 0;
             
         }
             
-    } else if ( mascara == "Classe B" ) {
-        if( aux<256 ){
+    } else if ( classe == "Classe B" ) {
+        if( aux<=254 ){
             aux = Math.ceil(aux);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             
-        }else if( (aux>256) && (aux<65536) ){
+        }else if( (aux>254) && (aux<=65534) ){
             aux = Math.ceil(aux/256);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + masc(aux) + " . " + 0;
 
         }
-    } else if ( (mascara == "Classe C")  ) {
-        if( aux<256 ){
+    } else if ( (classe == "Classe C")  ) {
+        if( aux<=254 ){
             aux = Math.ceil(aux);   //A função Math.ceil(x) retorna o maior número inteiro maior ou igual a "x".
             return 255 + " . " + 255 + " . " + 255 + " . " + masc(aux);
             

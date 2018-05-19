@@ -1,16 +1,16 @@
-# Calcula_Redes_e_SubRedes
+# Calculadora de Redes e SubRedes
 
-##Atividade da disciplina de Redes de Computadores
+## Atividade da disciplina de Redes de Computadores
 
-##IFMS - Nova Andradina - 2018
+## IFMS - Nova Andradina - 2018
 
-##Professor: Fábio Duarte
+## Professor: Fábio Duarte
 
-##Aluno: Carlos Henrique Camilo da Fonseca
+## Aluno: Carlos Henrique Camilo da Fonseca
 
 
 
-##Criar um programa em qualquer linguagem de programação capaz de fazer a análise de um IP e identificar sua :
+### Criar um programa em qualquer linguagem de programação capaz de fazer a análise de um IP e identificar sua :
 
 * 1 - Classe
 * 2 - Máscara
@@ -23,4 +23,4 @@
 
 
 
-##Criar um programa em qualquer linguagem de programação capaz de dividir uma rede com base na quantidade de ips desejados ou com base na quantidade de subredes
+### Criar um programa em qualquer linguagem de programação capaz de dividir uma rede com base na quantidade de ips desejados ou com base na quantidade de subredes

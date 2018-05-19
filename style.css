@@ -1,15 +1,12 @@
 body{
     width: 80%;
     margin: 0 auto;
-    padding: 5px;
-    color: #8B2635;
+    padding: 0 5px;
     font-family: Optima, sans-serif;
-    border: solid;
-    border-color: #8B2635;
 }
 
 main{
-    background: #E0E2DB;
+    background: #F5F9E9;
     padding: 5px;
 }
 
@@ -22,14 +19,11 @@ h2{
 }
 
 header, footer{
-    background: #D2D4C8;
+    background: #07393C;
+    color: #F5F9E9;
     margin: 0;
     padding: 5px 20px;
     text-align: center;
-}
-
-footer{
-    background: #D2D4C8;
 }
 
 #container{
@@ -44,6 +38,10 @@ span{
     display: flex;
 }
 
+#div-radio{
+    display: inline;
+}
+
 th, td {
     padding: 0 5px;
 }
@@ -52,5 +50,11 @@ th, td {
     main, header, footer{
         height: auto;
         padding: 5px;
+    }
+    #container{
+        display: block;    
+    }
+    #div-sub-rede{
+        display: block;
     }
 }
